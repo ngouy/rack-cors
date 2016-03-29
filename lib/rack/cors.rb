@@ -355,6 +355,12 @@ module Rack
           end
 
           def origin_for_response_header(origin)
+            Rails.logger.debug('================')
+            Rails.logger.debug('========pr = ========')
+            Rails.logger.debug(public_resource)
+            Rails.logger.debug('========cr = ========')
+            Rails.logger.debug(!credentials)
+            Rails.logger.debug('================')
             return '*' if public_resource? && !credentials
             origin
           end
