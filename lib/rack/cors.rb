@@ -359,7 +359,7 @@ module Rack
             Rails.logger.debug('========pr = ========')
             Rails.logger.debug(public_resource?)
             Rails.logger.debug('========cr = ========')
-            Rails.logger.debug(!credentials)
+            Rails.logger.debug(!credentials ? 'true' : 'false')
             Rails.logger.debug('================')
             return '*' if public_resource? && !credentials
             origin
